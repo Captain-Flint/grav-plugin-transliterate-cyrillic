@@ -51,6 +51,8 @@ class TransliterateCyrillicPlugin extends Plugin
                 $event = 'onPageContentRaw';
             } elseif ($config['mode'] == 'html') {
                 $event = 'onPageContentProcessed';
+            } else {
+                $event = 'onPageContentProcessed';
             }
         } else {
             $event = $config['event'];
@@ -85,6 +87,8 @@ class TransliterateCyrillicPlugin extends Plugin
         } elseif ($config['mode'] == 'html') {
             $content = $page->content();
             $content = TransliterateCyrillic::process($content);
+        } else {
+            return;
         }
         $page->setRawContent($content);
     }
