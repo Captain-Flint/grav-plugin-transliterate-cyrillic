@@ -21,8 +21,6 @@ The plugin is enabled by default, and can be disabled by copying `user/plugins/i
 
 ## Usage and configuration
 
-Change the `mode`-setting from `markdown` to `html` to target processed content. Change `event` to whatever [Event Hook](https://learn.getgrav.org/plugins/event-hooks) you find more appropriate than the default "onPageContentRaw" (`markdown`) or "onPageContentProcessed" (`html`).
-
 A Twig-function, `transliterate_cyrillic()`, can be used to apply the functionality directly in Twig. Just pass content into it like `transliterate_cyrillic(page.content)`, or use it as a filter like `page.content|transliterate_cyrillic`.
 
 # Running tests
