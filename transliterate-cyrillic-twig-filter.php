@@ -45,7 +45,7 @@ class TransliterateCyrillicPlugin extends Plugin
         }
         
         $config = (array) $this->config->get('plugins');
-        $config = $config['transliterate-cyrillic'];
+        $config = $config['transliterate-cyrillic-twig-filter'];
         if ($config['enabled']) {
             $this->enable(
                 [
@@ -68,7 +68,7 @@ class TransliterateCyrillicPlugin extends Plugin
     {
         $page = $event['page'];
         $config = (array) $this->config->get('plugins');
-        $config = $config['transliterate-cyrillic'];
+        $config = $config['transliterate-cyrillic-twig-filter'];
         $page->setRawContent($content);
     }
 
