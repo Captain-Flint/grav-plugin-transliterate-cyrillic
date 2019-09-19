@@ -46,21 +46,9 @@ class TransliterateCyrillicPlugin extends Plugin
         
         $config = (array) $this->config->get('plugins');
         $config = $config['transliterate-cyrillic'];
-        if (!isset($config['event'])) {
-            if ($config['mode'] == 'markdown') {
-                $event = 'onPageContentRaw';
-            } elseif ($config['mode'] == 'html') {
-                $event = 'onPageContentProcessed';
-            } else {
-                $event = 'onPageContentProcessed';
-            }
-        } else {
-            $event = $config['event'];
-        }
         if ($config['enabled']) {
             $this->enable(
                 [
-                    $event => ['output', 0],
                     'onTwigExtensions' => ['onTwigExtensions', 0]
                 ]
             );
@@ -81,15 +69,6 @@ class TransliterateCyrillicPlugin extends Plugin
         $page = $event['page'];
         $config = (array) $this->config->get('plugins');
         $config = $config['transliterate-cyrillic'];
-        if ($config['mode'] == 'markdown') {
-            $content = $page->getRawContent();
-            $content = TransliterateCyrillic::process($content);
-        } elseif ($config['mode'] == 'html') {
-            $content = $page->content();
-            $content = TransliterateCyrillic::process($content);
-        } else {
-            return;
-        }
         $page->setRawContent($content);
     }
 
