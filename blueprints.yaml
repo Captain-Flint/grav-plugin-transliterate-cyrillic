@@ -4,7 +4,7 @@ description: "Twig filter for transliterating Cyrillic text to Latin."
 icon: file-text
 author:
   name: Captain Flint
-  email: flint@criptext.com
+  email: flint_criptext.com
 homepage: https://github.com/Captain-Flint/grav-plugin-transliterate-cyrillic-twig-filter
 keywords: twig, filter, cyr-to-lat, transliterate, cyrillic
 bugs: https://github.com/Captain-Flint/grav-plugin-transliterate-cyrillic-twig-filter/issues

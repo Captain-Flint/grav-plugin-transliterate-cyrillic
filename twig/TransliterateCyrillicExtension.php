@@ -1,7 +1,7 @@
 <?php
 namespace Grav\Plugin;
 
-use TransliterateCyrillicPlugin\TransliterateCyrillicMethod as TransliterateCyrillic;
+use TransliterateCyrillicTwigFilterPlugin\TransliterateCyrillicTwigFilterMethod as TransliterateCyrillic;
 
 /**
  * Add Twig-extensions for transliterating cyrillic

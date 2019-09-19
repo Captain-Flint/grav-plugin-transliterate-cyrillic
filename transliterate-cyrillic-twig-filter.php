@@ -5,10 +5,9 @@ use Grav\Common\Grav;
 use Grav\Common\Plugin;
 use Grav\Common\Page\Page;
 use Grav\Common\Twig\Twig;
-use RocketTheme\Toolbox\Event\Event;
 
 require 'transliterate-cyrillic-method.php';
-use TransliterateCyrillicPlugin\TransliterateCyrillicMethod as TransliterateCyrillic;
+use TransliterateCyrillicTwigFilterPlugin\TransliterateCyrillicTwigFilterMethod as TransliterateCyrillic;
 
 /**
  * Transliterates cyrillic text into latin
@@ -19,7 +18,7 @@ use TransliterateCyrillicPlugin\TransliterateCyrillicMethod as TransliterateCyri
  * @return  void
  * @license MIT License by Ole Vik
  */
-class TransliterateCyrillicPlugin extends Plugin
+class TransliterateCyrillicTwigFilterPlugin extends Plugin
 {
     /**
      * Register events with Grav
@@ -55,21 +54,6 @@ class TransliterateCyrillicPlugin extends Plugin
         } else {
             return;
         }
-    }
-
-    /**
-     * Replaces content with transliterated Cyrillic content
-     *
-     * @param Event $event Instance of RocketTheme\Toolbox\Event\Event
-     *
-     * @return void
-     */
-    public function output(Event $event)
-    {
-        $page = $event['page'];
-        $config = (array) $this->config->get('plugins');
-        $config = $config['transliterate-cyrillic-twig-filter'];
-        $page->setRawContent($content);
     }
 
     /**

@@ -1,17 +1,17 @@
 <?php
-namespace TransliterateCyrillicPlugin;
+namespace TransliterateCyrillicTwigFilterPlugin;
 
 /**
  * Transliterates cyrillic text into latin
  *
- * Class TransliterateCyrillicWrapper
+ * Class TransliterateCyrillicTwigFilterWrapper
  *
  * @package Grav\Plugin
  * @return  void
  * @license MIT License by Ole Vik
  * @license MIT License by Captain Flint
  */
-class TransliterateCyrillicMethod
+class TransliterateCyrillicTwigFilterMethod
 {
     /**
      * Transliterate text from cyrillic to latin
